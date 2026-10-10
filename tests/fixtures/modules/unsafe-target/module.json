@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "unsafe-target",
+  "name": "Unsafe Target",
+  "version": "1.0.0",
+  "description": "Tries to write outside the target.",
+  "type": "cli",
+  "status": "experimental",
+  "install": { "files": [
+    { "source": "files/x.txt", "target": "../outside.txt" },
+    { "source": "../good-module/files/hello.txt", "target": "ok.txt" },
+    { "source": "files/x.txt", "target": "/etc/x.txt" }
+  ] }
+}

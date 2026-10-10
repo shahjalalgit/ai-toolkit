@@ -1,0 +1,9 @@
+# Example robots.txt
+User-agent: *
+Disallow: /admin/
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
+
+Sitemap: https://www.example.com/sitemap.xml

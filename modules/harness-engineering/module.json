@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "harness-engineering",
+  "name": "Harness Engineering",
+  "version": "0.1.0",
+  "description": "Gated, human-supervised AI-assisted SDLC: ticket readiness gate, OpenAPI breaking-change check, review agents and a workflow skill.",
+  "type": "workflow",
+  "status": "experimental",
+  "runtime": { "node": ">=22", "claude-code": ">=2.0" },
+  "dependencies": [],
+  "entryPoints": {
+    "cli": "src/cli.mjs",
+    "workflow-skill": "claude/skills/harness-workflow/SKILL.md"
+  },
+  "env": [],
+  "permissions": ["fs:read", "exec"],
+  "install": {
+    "files": [
+      { "source": "src", "target": ".ai-toolkit/modules/harness-engineering/src" },
+      { "source": "templates", "target": ".ai-toolkit/modules/harness-engineering/templates" },
+      { "source": "claude/agents", "target": ".claude/agents" },
+      { "source": "claude/skills/harness-workflow", "target": ".claude/skills/harness-workflow" }
+    ]
+  },
+  "tests": "tests",
+  "compatibility": { "os": ["macos", "linux"], "notes": "CLI needs only Node. Agents and skill need Claude Code with skills and subagents support." }
+}

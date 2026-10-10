@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  EXAMPLE ONLY. The toolkit never installs this file.
+  Replace every /ABSOLUTE/PATH placeholder, then follow
+  modules/daily-automation/README.md ("Scheduling on macOS").
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.example.ai-toolkit.daily-summary</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/ABSOLUTE/PATH/TO/ai-toolkit/modules/daily-automation/scripts/run-daily-summary.sh</string>
+    <string>/ABSOLUTE/PATH/TO/tasks.json</string>
+    <string>/ABSOLUTE/PATH/TO/summaries</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>18</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>/tmp/ai-toolkit-daily-summary.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/ai-toolkit-daily-summary.log</string>
+</dict>
+</plist>

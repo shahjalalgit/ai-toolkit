@@ -1,0 +1,51 @@
+name: Bug report
+description: Something in the toolkit or a module does not work as documented.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. **Do not report security vulnerabilities here**; see SECURITY.md.
+        Remove secrets, tokens and customer data from logs before pasting.
+  - type: input
+    id: module
+    attributes:
+      label: Module
+      description: Module id (e.g. seo-automation), or "installer" / "repository".
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Include the exact command and its full output.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ./scripts/setup.sh install ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Output of the commands below.
+      value: |
+        OS (sw_vers or uname -a):
+        node --version:
+        bash --version | head -1:
+        git rev-parse --short HEAD:
+    validations:
+      required: true

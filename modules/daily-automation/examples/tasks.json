@@ -1,0 +1,11 @@
+{
+  "tasks": [
+    { "id": "ENG-101", "title": "Fix pagination bug in orders API", "status": "done", "priority": "high", "completedOn": "2026-10-10" },
+    { "id": "ENG-102", "title": "Write contract tests for /v2/products", "status": "in_progress", "priority": "high", "due": "2026-10-12" },
+    { "id": "ENG-103", "title": "Upgrade CI runners to Node 24", "status": "blocked", "priority": "medium", "notes": "Waiting for platform team approval." },
+    { "id": "ENG-104", "title": "Document release checklist", "status": "todo", "priority": "low", "due": "2026-10-09" },
+    { "id": "ENG-105", "title": "Review sitemap generator PR", "status": "todo", "priority": "medium", "due": "2026-10-10" },
+    { "id": "ENG-106", "title": "Spike: cache warmup job", "status": "todo" }
+  ],
+  "notes": ["Team sync moved to 15:00."]
+}

@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "sku": "LAMP-01", "quantity": 0, "location": "warehouse-a" },
+    { "sku": "SHELF-03-OAK", "quantity": 4, "location": "warehouse-a" },
+    { "sku": "SHELF-03-OAK", "quantity": 1, "location": "warehouse-a" },
+    { "sku": "GHOST-SKU", "quantity": 7 },
+    { "sku": "RUG-04", "quantity": 2.5 }
+  ]
+}

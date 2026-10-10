@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ecommerce-automation",
+  "name": "E-commerce Automation",
+  "version": "0.1.0",
+  "description": "Deterministic product catalog and inventory consistency validation for local JSON exports.",
+  "type": "cli",
+  "status": "experimental",
+  "runtime": { "node": ">=22" },
+  "dependencies": [],
+  "entryPoints": { "validate-catalog": "src/validate-catalog.mjs" },
+  "env": [],
+  "permissions": ["fs:read"],
+  "install": {
+    "files": [
+      { "source": "src", "target": ".ai-toolkit/modules/ecommerce-automation/src" }
+    ]
+  },
+  "tests": "tests",
+  "compatibility": { "os": ["macos", "linux"], "notes": "Local JSON files only. No store API connectors in 0.1.x." }
+}

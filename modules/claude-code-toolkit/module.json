@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "claude-code-toolkit",
+  "name": "Claude Code Toolkit",
+  "version": "0.1.0",
+  "description": "Portable Claude Code skills, subagents, safety hooks, a local notification hook and a project instructions template.",
+  "type": "claude-code",
+  "status": "experimental",
+  "runtime": { "bash": ">=3.2", "jq": ">=1.6", "claude-code": ">=2.0" },
+  "dependencies": ["jq"],
+  "entryPoints": {
+    "settings-example": "config/settings.example.json",
+    "claude-md-template": "templates/CLAUDE.md"
+  },
+  "env": [],
+  "permissions": ["fs:read", "exec", "notify"],
+  "install": {
+    "files": [
+      { "source": "claude/skills/conventional-commit", "target": ".claude/skills/conventional-commit" },
+      { "source": "claude/skills/changelog-entry", "target": ".claude/skills/changelog-entry" },
+      { "source": "claude/agents", "target": ".claude/agents" },
+      { "source": "claude/hooks", "target": ".claude/hooks" },
+      { "source": "config", "target": ".ai-toolkit/modules/claude-code-toolkit/config" },
+      { "source": "templates", "target": ".ai-toolkit/modules/claude-code-toolkit/templates" }
+    ]
+  },
+  "tests": "tests",
+  "compatibility": { "os": ["macos", "linux"], "notes": "Notification hook shows desktop notifications on macOS only. Written against Claude Code 2.1.x." }
+}

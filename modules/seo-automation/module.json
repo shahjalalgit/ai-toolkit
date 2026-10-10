@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "seo-automation",
+  "name": "SEO Automation",
+  "version": "0.1.0",
+  "description": "Deterministic technical SEO checks (metadata, canonical, robots.txt, sitemaps, JSON-LD) plus labelled AEO/GEO content heuristics.",
+  "type": "cli",
+  "status": "experimental",
+  "runtime": { "node": ">=22" },
+  "dependencies": [],
+  "entryPoints": { "cli": "src/cli.mjs" },
+  "env": [],
+  "permissions": ["fs:read"],
+  "install": {
+    "files": [
+      { "source": "src", "target": ".ai-toolkit/modules/seo-automation/src" },
+      { "source": "claude/skills/seo-page-review", "target": ".claude/skills/seo-page-review" }
+    ]
+  },
+  "tests": "tests",
+  "compatibility": { "os": ["macos", "linux"], "notes": "Reads local files only. No network access in 0.1.x." }
+}

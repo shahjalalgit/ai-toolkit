@@ -1,0 +1,48 @@
+name: New automation / module proposal
+description: Propose a new module for the toolkit.
+labels: [module-proposal]
+body:
+  - type: markdown
+    attributes:
+      value: Read docs/module-development.md first. Proposals are reviewed for scope, safety and maintainability.
+  - type: input
+    id: module-id
+    attributes:
+      label: Proposed module id
+      placeholder: e.g. release-notes-automation
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose and use cases
+    validations:
+      required: true
+  - type: textarea
+    id: io
+    attributes:
+      label: Inputs, outputs and side effects
+      description: Files read/written, network calls, external services, anything visible to other people.
+    validations:
+      required: true
+  - type: textarea
+    id: permissions
+    attributes:
+      label: Permissions and secrets
+      description: Required credentials and the minimum scopes they need.
+    validations:
+      required: true
+  - type: dropdown
+    id: runtime
+    attributes:
+      label: Runtime
+      options: [Node.js, bash, Python, Claude Code assets only, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: testing
+    attributes:
+      label: How will it be tested?
+      description: Deterministic tests with local fixtures are required for merge.
+    validations:
+      required: true

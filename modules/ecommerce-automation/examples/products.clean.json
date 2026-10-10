@@ -1,0 +1,32 @@
+{
+  "currency": "USD",
+  "products": [
+    {
+      "sku": "TSHIRT",
+      "title": "Organic Cotton T-Shirt",
+      "price": 24.0,
+      "currency": "USD",
+      "availability": "in_stock",
+      "url": "https://shop.example.com/products/tshirt"
+    },
+    {
+      "sku": "TSHIRT-M-BLK",
+      "parentSku": "TSHIRT",
+      "title": "Organic Cotton T-Shirt - Medium / Black",
+      "price": 24.0,
+      "salePrice": 19.99,
+      "currency": "USD",
+      "availability": "in_stock",
+      "gtin": "4006381333931",
+      "imageUrl": "https://cdn.example.com/tshirt-m-blk.jpg"
+    },
+    {
+      "sku": "MUG-01",
+      "title": "Stoneware Mug, 350 ml",
+      "price": 12.5,
+      "currency": "USD",
+      "availability": "out_of_stock",
+      "gtin": "012345678905"
+    }
+  ]
+}

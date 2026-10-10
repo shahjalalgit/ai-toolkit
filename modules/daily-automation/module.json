@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "daily-automation",
+  "name": "Daily Automation",
+  "version": "0.1.0",
+  "description": "Deterministic daily engineering summary from an explicit task file, with opt-in macOS scheduling examples.",
+  "type": "cli",
+  "status": "experimental",
+  "runtime": { "node": ">=22", "bash": ">=3.2" },
+  "dependencies": [],
+  "entryPoints": {
+    "daily-summary": "src/daily-summary.mjs",
+    "scheduled-run": "scripts/run-daily-summary.sh"
+  },
+  "env": [],
+  "permissions": ["fs:read", "fs:write"],
+  "install": {
+    "files": [
+      { "source": "src", "target": ".ai-toolkit/modules/daily-automation/src" },
+      { "source": "scripts", "target": ".ai-toolkit/modules/daily-automation/scripts" }
+    ]
+  },
+  "tests": "tests",
+  "compatibility": { "os": ["macos", "linux"], "notes": "launchd example is macOS-only and never installed automatically." }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "ai-toolkit",
+  "version": "0.1.0",
+  "description": "One toolkit. Independent automations. Infinite possibilities.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "validate": "bash scripts/validate-repo.sh",
+    "validate:modules": "node scripts/lib/toolkit.mjs validate",
+    "test": "node --test tests/scripts/*.test.mjs modules/*/tests/*.test.mjs",
+    "lint:md": "markdownlint-cli2",
+    "lint:sh": "find scripts modules templates tests -name '*.sh' -not -path '*/node_modules/*' -exec shellcheck -x {} +",
+    "check:links": "node scripts/lib/check-links.mjs"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "0.23.3"
+  }
+}

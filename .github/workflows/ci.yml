@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: validate (${{ matrix.os }}, node ${{ matrix.node }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            node: 22
+            strict: "1"
+          - os: ubuntu-latest
+            node: 24
+            strict: "1"
+          - os: macos-latest
+            node: 24
+            strict: "0"
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - name: Show tool versions
+        run: |
+          node --version
+          bash --version | head -1
+          jq --version
+          shellcheck --version || true
+      - run: npm ci
+      # Strict mode fails if shellcheck or markdownlint is missing. The macOS
+      # runner is used to exercise bash 3.2 and BSD tools, not linting.
+      - name: Validate repository
+        run: bash scripts/validate-repo.sh
+        env:
+          AI_TOOLKIT_STRICT: ${{ matrix.strict }}

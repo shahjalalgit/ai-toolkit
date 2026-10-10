@@ -1,0 +1,11 @@
+{
+  "currency": "USD",
+  "products": [
+    { "sku": "LAMP-01", "title": "Desk Lamp", "price": 39.999, "currency": "USD", "availability": "in_stock", "gtin": "4006381333932" },
+    { "sku": "LAMP-01", "title": "Desk Lamp (duplicate)", "price": 39.99, "currency": "USD", "availability": "in_stock" },
+    { "sku": "CHAIR 02", "title": "Office Chair", "price": -10, "currency": "usd", "availability": "available" },
+    { "sku": "SHELF-03", "title": "Wall Shelf", "price": 49.0, "currency": "EUR", "availability": "in_stock", "url": "http://shop.example.com/shelf" },
+    { "sku": "SHELF-03-OAK", "parentSku": "SHELF-99", "title": "Wall Shelf - Oak", "price": 55.0, "currency": "USD", "availability": "out_of_stock" },
+    { "sku": "RUG-04", "price": 120.0, "currency": "USD", "availability": "in_stock" }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "{{MODULE_ID}}",
+  "name": "{{MODULE_NAME}}",
+  "version": "0.1.0",
+  "description": "{{MODULE_DESCRIPTION}}",
+  "type": "cli",
+  "status": "experimental",
+  "runtime": { "node": ">=22" },
+  "dependencies": [],
+  "entryPoints": { "cli": "src/cli.mjs" },
+  "env": [],
+  "permissions": ["fs:read"],
+  "install": {
+    "files": [
+      { "source": "src", "target": ".ai-toolkit/modules/{{MODULE_ID}}/src" }
+    ]
+  },
+  "tests": "tests",
+  "compatibility": { "os": ["macos", "linux"] }
+}

@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Secrets and local configuration: never commit these
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.claude/settings.local.json
+
+# Install state created when the toolkit is installed into itself for testing
+.ai-toolkit/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Logs and generated output
+*.log
+coverage/
+tmp/

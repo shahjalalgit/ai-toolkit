@@ -1,0 +1,16 @@
+// markdownlint-cli2 configuration. Rules: https://github.com/DavidAnson/markdownlint
+{
+  "config": {
+    "default": true,
+    // Long lines are fine in tables, links and commands.
+    "MD013": false,
+    // Allow the same heading text in different sections (e.g. per-version "Added").
+    "MD024": { "siblings_only": true },
+    // Inline HTML is used for template comments only.
+    "MD033": false,
+    // Skill and agent files start with YAML frontmatter, not a heading.
+    "MD041": false
+  },
+  "globs": ["**/*.md"],
+  "ignores": ["node_modules/**"]
+}

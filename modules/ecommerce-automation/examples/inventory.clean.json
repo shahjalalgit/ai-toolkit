@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "sku": "TSHIRT-M-BLK", "quantity": 12, "location": "warehouse-a" },
+    { "sku": "TSHIRT-M-BLK", "quantity": 3, "location": "store-1" },
+    { "sku": "MUG-01", "quantity": 0, "location": "warehouse-a" }
+  ]
+}
