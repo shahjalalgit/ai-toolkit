@@ -17,6 +17,6 @@
     "check:links": "node scripts/lib/check-links.mjs"
   },
   "devDependencies": {
-    "markdownlint-cli2": "0.23.3"
+    "markdownlint-cli2": "0.24.0"
   }
 }
